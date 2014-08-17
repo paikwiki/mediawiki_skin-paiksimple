@@ -1,0 +1,347 @@
+/*
+**
+** MediaWiki 'emptySkin' style sheet for CSS2-capable browsers.
+** Copyright chPaik - http://www.paikwiki.com/
+** License: GPL (http://www.gnu.org/copyleft/gpl.html)
+**
+*/
+
+/* 구글 웹폰트 */
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+/* CSS 초기화 CSS Reset */
+* { margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { font-family:'나눔고딕', NanumGothic, 'Nanum Gothic'; color: #333;}
+li { list-style: none; }
+a { text-decoration: none; }
+img { border: 0; }
+
+/* 폰트 설정 */
+h1 { font-size: 24pt; }
+h2 { font-size: 21pt; }
+h3 { font-size: 21pt; }
+h4 { font-size: 18pt; }
+h5 { font-size: 14pt; }
+h6 { font-size: 12pt; }
+
+/* 링크색 */
+a, a:visited { color: #2D8CCC; }   
+a:hover { color: #EF3D3D; }
+a:active { color: #EF3D3D; }
+a.new { color: #999;}
+
+/* 전체 레이아웃 */
+#globalWrapper { position: relative; width: 1024px; height: 100%; margin: 0 auto; }
+#column-content { float: left; display: block; width: 100%; margin-top: 157px; border-top: 1px solid #EF3D3D; border-bottom: 1px solid #EF3D3D; }
+#column-content #content { margin-left: 239px; padding-right: 20px; box-sizing: border-box; }
+#column-one { float: left; display: block; }
+
+/*
+**
+** 헤더
+**
+*/
+
+/* 로고 */
+#p-logo { display: block; position: absolute; top: 101px; left: 8px; width: 234px; height: 53px; background-image: url('logo.gif');}
+#p-logo a { position: absolute; display: block; display: block; left: 0px; width: 234px; height: 63px; background-image: none!important; } 
+
+/* 부제 */
+#content #siteSub { display: block; position: absolute; top: 139px; left: 254px; font-size: 10pt; color: #666666; } 
+
+/* 개인도구(global top menu) */
+#column-one #p-personal { position: absolute; top: 0; width: 1024px; height: 28px; border-bottom: 1px solid #333333; }
+#column-one #p-personal h5 { display: none; } 
+#column-one #p-personal ul { float: right; }
+#column-one #p-personal ul li { display: inline-block; height: 24px; line-height: 24px; padding: 2px 8px; margin-top: 2px; border-left: 1px solid #333333; font-size: 8pt; box-sizing: border-box; }
+#column-one #p-personal ul li:first-child { border-left: 0; }
+#column-one #p-personal ul li a { color: #333333; }
+#column-one #p-personal ul li a:hover { color: #2D8CCC; }
+
+
+/* 서치박스 */
+#column-one #p-search { position: absolute; top: 36px; right: 4px; }
+#column-one #p-search #searchBody #searchform #searchInput { padding: 2px; border-width: 0 0 1px 0; border-color: #EF3D3D; }
+#column-one #p-search #searchBody #searchform .searchButton { border: 1px solid #EF3D3D; border-radius: 0px; padding: 2px 8px; box-sizing: border-box; background-color: #ffffff; }
+#column-one #p-search h5 { display: none; }
+
+
+/*
+** 
+** 본문
+**
+*/
+
+/* 공지사항 */
+#siteNotice { width: 1024px; margin-left: -239px; box-sizing: border-box; }
+#siteNotice #localNotice { width: 980px; padding: 24px 48px; margin: 24px auto; margin-bottom: 48px; border-top: 1px solid #EF3D3D; border-bottom: 1px solid #EF3D3D; background-color: #fdfdfd; box-sizing: border-box; }
+#siteNotice #localNotice p { text-align: center; }
+
+/* 본문 정렬 */
+#content h1#firstHeading { display: inline-block; min-width: 239px; margin-left: -239px; margin-bottom: 12px; text-indent: 20px; background-color: #EF3D3D; color: #eeeeee;}
+#content #bodyContent { position: relative; padding-left: 20px; margin-left: 8px; margin-bottom: 22px; box-sizing: border-box;}
+
+#content #bodyContent > h2,
+#content #bodyContent > h3,
+#content #bodyContent > h4,
+#content #bodyContent > h5,
+#content #bodyContent > h6 { max-width: 239px; margin: 72px 0 0 -267px; text-indent: 20px; border-bottom: 1px solid #333333; color: #333333; }
+
+#content #bodyContent > h2 { font-size: 16pt;}
+#content #bodyContent > h3 { text-indent: 32px; color: #555; font-size: 14pt;}
+#content #bodyContent > h4 { text-indent: 44px; color: #777; font-size: 12pt;}
+#content #bodyContent > h5 { text-indent: 56px; color: #999; font-size: 10pt;}
+#content #bodyContent > h6 { max-width: 239px; margin: 72px 0 0 -267px; margin-bottom: 12px; text-indent: 20px; border-bottom: 1px solid #333333; color: #333333; }
+
+#content #bodyContent #jump-to-nav,
+#content #bodyContent .printfooter { display: none; }
+
+/* 목차 */
+#content #bodyContent #toc { width: 100%; }
+#content #bodyContent #toc #toctitle { }
+#content #bodyContent #toc #toctitle h2 { max-width: 239px; margin: 36px 0 0 -267px; text-indent: 20px; border-bottom: 1px solid #333333; color: #333333; }
+#content #bodyContent #toc #toctitle .toctoggle { position: absolute; margin-top: -21px; margin-left: -84px; }
+#content #bodyContent #toc td > ul { display: block; width: 100%; padding: 24px 0; margin-top: -1px; border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; background-color: #fdfdfd }
+
+/* 부분편집 버튼 */
+#content .editsection { display: block; float: right; margin-top: 5px; color: #cccccc; text-align: right; font-size: 9pt; height: 16px; }
+
+/* 문서 편집 등 */
+#column-one #p-cactions { position: absolute; top: 134px; left: 0px; width: 1024px; height: 26px; box-sizing: border-box; }
+#column-one #p-cactions .pBody { float: right; }
+#column-one #p-cactions .pBody ul { border-top: 1px solid #EF3D3D; border-left: 1px solid #EF3D3D;  border-right: 1px solid #EF3D3D; }
+#column-one #p-cactions .pBody ul li { display: inline-block; height: 22px; line-height: 22px; padding: 0px 8px; border-left: 1px solid #EF3D3D; font-size: 9pt; box-sizing: border-box; }
+#column-one #p-cactions .pBody ul li:first-child { border-left: 0; }
+#column-one #p-cactions .pBody ul li a { color: #333333; }
+#column-one #p-cactions .pBody ul li a:hover { color: #2D8CCC; }
+
+#column-one #p-cactions h5 { display: none; }
+#column-one #p-cactions {}
+
+/* 분류 */
+#content #bodyContent #catlinks { width: 1024px; margin-left: -267px; box-sizing: border-box; }
+#content #bodyContent #mw-normal-catlinks { width: 980px; padding: 4px; margin: 8px auto; margin-top: 40px; border-top: 1px solid #aaaaaa; border-bottom: 1px solid #aaaaaa; text-align: right; font-size: 9pt; box-sizing: border-box; }
+#content #bodyContent #mw-normal-catlinks a { color: #333333; }
+#content #bodyContent #mw-normal-catlinks a:hover { color: #2D8CCC; }
+
+/* 목록 */
+#content #bodyContent ul li { list-style-type: circle; margin-left: 28px; }
+
+
+/* 외부 링크 아이콘 */
+/*
+** keep the whitespace in front of the ^=, hides rule from konqueror
+** this is css3, the validator doesn't like it when validating as css2
+*/
+#bodyContent a.external,
+#bodyContent a.external[href ^="gopher://"] {
+	background: url(external.png) center right no-repeat;
+	padding: 0 13px;
+}
+.rtl #bodyContent a.external,
+.rtl #bodyContent a.external[href ^="gopher://"] {
+	background-image: url(external-rtl.png);
+}
+#bodyContent a.external[href ^="https://"],
+.link-https {
+	background: url(lock_icon.gif) center right no-repeat;
+	padding: 0 16px;
+}
+#bodyContent a.external[href ^="mailto:"],
+.link-mailto {
+	background: url(mail_icon.gif) center right no-repeat;
+	padding: 0 18px;
+}
+#bodyContent a.external[href ^="news://"] {
+	background: url(news_icon.png) center right no-repeat;
+	padding: 0 18px;
+}
+#bodyContent a.external[href ^="ftp://"],
+.link-ftp {
+	background: url(file_icon.gif) center right no-repeat;
+	padding: 0 18px;
+}
+#bodyContent a.external[href ^="irc://"],
+.link-irc {
+	background: url(discussionitem_icon.gif) center right no-repeat;
+	padding: 0 18px;
+}
+#bodyContent a.external[href $=".ogg"], #bodyContent a.external[href $=".OGG"],
+#bodyContent a.external[href $=".mid"], #bodyContent a.external[href $=".MID"],
+#bodyContent a.external[href $=".midi"], #bodyContent a.external[href $=".MIDI"],
+#bodyContent a.external[href $=".mp3"], #bodyContent a.external[href $=".MP3"],
+#bodyContent a.external[href $=".wav"], #bodyContent a.external[href $=".WAV"],
+#bodyContent a.external[href $=".wma"], #bodyContent a.external[href $=".WMA"],
+.link-audio {
+	background: url("audio.png") center right no-repeat;
+	padding: 0 13px;
+}
+#bodyContent a.external[href $=".ogm"], #bodyContent a.external[href $=".OGM"],
+#bodyContent a.external[href $=".avi"], #bodyContent a.external[href $=".AVI"],
+#bodyContent a.external[href $=".mpeg"], #bodyContent a.external[href $=".MPEG"],
+#bodyContent a.external[href $=".mpg"], #bodyContent a.external[href $=".MPG"],
+.link-video {
+	background: url("video.png") center right no-repeat;
+	padding: 0 13px;
+}
+#bodyContent a.external[href $=".pdf"], #bodyContent a.external[href $=".PDF"],
+#bodyContent a.external[href *=".pdf#"], #bodyContent a.external[href *=".PDF#"],
+#bodyContent a.external[href *=".pdf?"], #bodyContent a.external[href *=".PDF?"],
+.link-document {
+	background: url("document.png") center right no-repeat;
+	padding: 0 12px;
+}
+
+
+/*
+** 
+** 푸터
+**
+*/
+
+/* 커스텀 메뉴와 도구 모음 */
+#column-one .generated-sidebar { float: left; width: 256px; height: 200px; }
+#column-one #p-tb { float: left; width: 256px; height: 200px; }
+#column-one .generated-sidebar h5,
+#column-one #p-tb h5 { margin: 24px 22px 12px 24px; box-sizing: border-box; } 
+#column-one .generated-sidebar .pBody,
+#column-one #p-tb .pBody { margin: 12px 22px; box-sizing: border-box; font-size: 10pt; } 
+#column-one .generated-sidebar .pBody a,
+#column-one #p-tb .pBody a { color: #999999; } 
+#column-one .generated-sidebar .pBody a:hover,
+#column-one #p-tb .pBody a:hover { color: #2D8CCC; } 
+
+/* 푸터 메시지 */
+#footer { float: left; width: 512px; height: 200px; }
+#footer #f-poweredbyico { position: absolute; right: 22px; margin-top: 160px; }
+#footer #f-list { margin: 56px 0 0 22px; box-sizing: border-box; font-size: 10pt; } 
+#footer #f-list a { color: #999999; } 
+#footer #f-list a:hover { color: #2D8CCC; } 
+
+/*
+** 
+** 수정 관련
+**
+*/
+
+/*텍스트 박스 크기 */
+#wpTextbox1 { width: 100%; font-size: 12pt; padding: 20px; box-sizing: border-box;}
+
+/* 새글 경고창 */
+.mw-newarticletext { width: 980px; padding: 8px 16px; margin: 20px 0 20px -239px; box-sizing: border-box; }
+
+/* 미리보기 경고창 */
+#bodyContent div.mw-warning-with-logexcerpt { width: 980px; padding: 8px 16px; margin: 20px 0 20px -239px; box-sizing: border-box; }
+
+#bodyContent #toolbar { width: 940px; margin-left: -219px; }
+#bodyContent #editform { width: 940px; margin-left: -219px; }
+
+/* 멀티틀 기능(기본 위키에는 없음) */
+#multiboilerplateform { width: 940px; margin-left: -219px; margin-bottom: 20px; height: 80px; }
+#multiboilerplateform fieldset { height: 72px; }
+#multiboilerplateform fieldset input,
+#multiboilerplateform fieldset label select { font-size: 16pt; }
+#multiboilerplateform fieldset label select { margin: 16px; }
+
+/* 저작권 관련 경고 문구 */
+#editpage-copywarn { margin: 20px 0; }
+
+/* 편집요약 부분 */
+.editCheckboxes { margin: 12px 0; }
+
+/* 편집 버튼 */
+.editButtons input { font-size: 12pt; }
+.editHelp { margin-left: 12px; }
+#wpSave { font-size: 120%; }
+
+
+/* 미리보기 모드 */
+#wikiPreview h2,
+#wikiPreview h3,
+#wikiPreview h4,
+#wikiPreview h5,
+#wikiPreview h6 { max-width: 239px; margin: 72px 0 0 -267px; text-indent: 20px; border-bottom: 1px solid #333333; color: #333333; }
+
+#wikiPreview h2 { font-size: 16pt;}
+#wikiPreview h3 { text-indent: 32px; color: #555; font-size: 14pt;}
+#wikiPreview h4 { text-indent: 44px; color: #777; font-size: 12pt;}
+#wikiPreview h5 { text-indent: 56px; color: #999; font-size: 10pt;}
+#wikiPreview h6 { max-width: 239px; margin: 72px 0 0 -267px; margin-bottom: 12px; text-indent: 20px; border-bottom: 1px solid #333333; color: #333333; }
+
+
+
+/*
+** 
+** 미디어위키 기능 관련
+**
+*/
+
+/* 분류 페이지 */
+#mw-subcategories h2,
+#mw-pages h2 { max-width: 239px; margin: 72px 0 0 -267px; text-indent: 20px; border-bottom: 1px solid #333333; color: #333333; }
+#mw-subcategories h2,
+#mw-pages h2 { font-size: 16pt;}
+#mw-subcategories h3,
+#mw-pages h3 { color: #555; font-size: 14pt;}
+#mw-subcategories h4,
+#mw-pages h4 { color: #777; font-size: 12pt;}
+#mw-subcategories h5,
+#mw-pages h5 { color: #999; font-size: 10pt;}
+#mw-subcategories h6,
+#mw-pages h6 { max-width: 239px; margin: 72px 0 0 -267px; margin-bottom: 12px; border-bottom: 1px solid #333333; color: #333333; }
+#mw-subcategories h3,
+#mw-subcategories h4,
+#mw-subcategories h5,
+#mw-subcategories h6,
+#mw-pages h3,
+#mw-pages h4,
+#mw-pages h5,
+#mw-pages h6 { margin-top: 12px; }
+
+/* 찾기 페이지 */
+#content #bodyContent #powersearch { width: 980px; margin: 20px 0 20px -239px; box-sizing: border-box; }
+#content #bodyContent #powersearch ul li { float: left; height: 34px; margin-left: 0; border-left: 1px solid #EF3D3D; padding: 2px 8px; list-style: none; list-style-type: none; }
+#content #bodyContent #powersearch ul li:first-child { border-left: 0; }
+#content #bodyContent #powersearch .mw-search-formheader { border: 1px solid #EF3D3D; }
+#content #bodyContent #powersearch fieldset#mw-searchoptions { border: 1px solid #EF3D3D!important; border-top: 0!important; }
+/* 관리 모드 */
+
+/* 특수문서 목록의 테이블 */
+table.wikitable { width: 100%;}
+
+/* 특수문서 목록의 헤딩 태그 */
+#bodyContent .mw-specialpagesgroup { padding-top: 8px; padding-bottom: 4px; }
+
+/* 최근 바뀜 */
+.page-특수기능_최근바뀜 #content #bodyContent > p,
+ .page-특수기능_최근바뀜 #content #bodyContent .rcoptions { width: 980px; margin-left: -239px;}
+#content #bodyContent .rcoptions { padding: 12px; border: 1px solid #EF3D3D; }
+/* 파일 올리기 */
+.page-특수기능_파일올리기 #content #bodyContent { position: relative; padding-left: 20px; margin-left: -219px; margin-bottom: 22px; box-sizing: border-box;}
+.page-특수기능_파일올리기 #content #bodyContent form fieldset { margin: 20px 0; border: 1px solid #EF3D3D; }
+.page-특수기능_파일올리기 #content #bodyContent form .mw-htmlform-submit { font-size: 12pt; }
+
+
+/*
+** 
+** 사용자 환경설정
+**
+*/
+
+/* 사용자 환경 설정 목록 */
+.page-특수기능_환경설정 #column-content #content #bodyContent { width: 980px; padding: 8px 16px; margin: 20px 0 20px -219px; box-sizing: border-box; }
+.page-특수기능_환경설정 #column-content #content #bodyContent ul#preftoc { width: 980px; height: 25px; clear: both;}
+.page-특수기능_환경설정 #column-content #content #bodyContent ul#preftoc li { float: left; height: 25px; margin-left: 0; border-left: 1px solid #EF3D3D; padding: 2px 8px; list-style: none; list-style-type: none; }
+.page-특수기능_환경설정 #column-content #content #bodyContent form { width: 980px; }
+.page-특수기능_환경설정 #column-content #content #bodyContent form #preferences fieldset { border: 1px solid #EF3D3D;}
+.page-특수기능_환경설정 #column-content #content #bodyContent form #preferences fieldset fieldset { margin: 20px 12px; padding: 12px; border: 1px solid #EF3D3D; box-sizing: border-box;}
+.page-특수기능_환경설정 #column-content #content #bodyContent form #preferences .prefsection { width: 100%; }
+.page-특수기능_환경설정 #column-content #content #bodyContent form #preferences .mw-prefs-buttons { padding: 12px 0; }
+.page-특수기능_환경설정 #column-content #content #bodyContent form #preferences .mw-prefs-buttons input { font-size: 12pt; }
+.page-특수기능_환경설정 #column-content #content #bodyContent form #preferences .mw-prefs-buttons a { margin-left: 12px; }
+
+
+
+
+
